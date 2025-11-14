@@ -19,6 +19,28 @@ MCP Serverの最小実装例です。入力されたメッセージをそのま�
 npm install
 ```
 
+## Claude Codeへの登録
+
+このMCPサーバーをClaude Codeに登録して使用できます。
+
+### 登録方法
+
+このディレクトリ（`typescript/`）で以下のコマンドを実行してください。
+
+#### claude mcp add コマンドを使用
+
+```bash
+claude mcp add --transport stdio minimal-echo --scope project -- npm start
+```
+
+#### claude mcp add-json コマンドを使用
+
+```bash
+claude mcp add-json minimal-echo '{"type":"stdio","command":"npm","args":["start"]}' --scope project
+```
+
+`--scope project` を指定することで、プロジェクトルートに `.mcp.json` ファイルが作成され、チーム全体で共有できます。
+
 ## 実行方法
 
 ### 開発モード（tsx使用）
