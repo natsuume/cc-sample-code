@@ -30,6 +30,30 @@ pip install -e ".[dev]"
 uv pip install -e ".[dev]"
 ```
 
+## Claude Codeへの登録
+
+このMCPサーバーをClaude Codeに登録して使用できます。
+
+### 登録方法
+
+このディレクトリ（`python/`）で以下のコマンドを実行してください。
+
+#### claude mcp add コマンドを使用
+
+```bash
+claude mcp add --transport stdio qiita-search --scope project -- python -m src.server
+```
+
+#### claude mcp add-json コマンドを使用
+
+```bash
+claude mcp add-json qiita-search '{"type":"stdio","command":"python","args":["-m","src.server"]}' --scope project
+```
+
+`--scope project` を指定することで、プロジェクトルートに `.mcp.json` ファイルが作成され、チーム全体で共有できます。
+
+## 使用方法
+
 ### 2. 開発ツールの確認
 
 ```bash
