@@ -10,11 +10,6 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
 
-// echoツールの入力スキーマ
-const EchoArgsSchema = z.object({
-  message: z.string().describe('エコーバックするメッセージ'),
-});
-
 // MCPサーバーインスタンスの作成
 const server = new McpServer({
   name: 'mcp-server-minimal',
@@ -26,7 +21,9 @@ server.registerTool(
   'echo',
   {
     description: '入力されたメッセージをそのまま返します',
-    inputSchema: EchoArgsSchema,
+    inputSchema: {
+      message: z.string().describe('エコーバックするメッセージ'),
+    },
   },
   async ({ message }) => {
     return {
