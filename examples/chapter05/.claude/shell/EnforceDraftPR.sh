@@ -26,7 +26,7 @@ if echo "$command" | grep -qE '(\s|^)(-d|--draft)(\s|$)'; then
 fi
 
 # --draft フラグを追加
-updated_command=$(echo "$command" | sed -E 's/(gh\s+pr\s+create)(\s|$)/\1 --draft\2/')
+updated_command=$(echo "$command" | sed -E 's/\bgh\s+pr\s+create\b/gh pr create --draft/')
 
 # JSON出力（jqで安全にエスケープ）
 jq -n \

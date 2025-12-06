@@ -1,14 +1,7 @@
 #!/bin/bash
 
 # 1～5秒のランダムな秒数を生成
-sleep_time=$(
-  od -An -N2 -tu2 /dev/urandom | awk '{print 1 + ($1 % 5)}'
-)
-
-# 検証: 数値でなければデフォルト値を使用
-if ! [[ "$sleep_time" =~ ^[0-9]+$ ]]; then
-  sleep_time=1
-fi
+sleep_time=$(shuf -i 1-5 -n 1)
 
 echo "sleep 時間: ${sleep_time}秒"
 
