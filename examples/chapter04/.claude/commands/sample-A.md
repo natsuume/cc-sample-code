@@ -1,5 +1,6 @@
 ---
 description: サンプルコマンドA
+allowed-tools: SlashCommand
 ---
 
 # Context
