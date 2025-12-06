@@ -1,14 +1,19 @@
-#!/bin/sh
+#!/bin/bash
 
 # 1～5秒のランダムな秒数を生成
 sleep_time=$(
   od -An -N2 -tu2 /dev/urandom | awk '{print 1 + ($1 % 5)}'
 )
 
+# 検証: 数値でなければデフォルト値を使用
+if ! [[ "$sleep_time" =~ ^[0-9]+$ ]]; then
+  sleep_time=1
+fi
+
 echo "sleep 時間: ${sleep_time}秒"
 
-  # 開始時刻（秒）を取得
-  start=$(date +%s)
+# 開始時刻（秒）を取得
+start=$(date +%s)
 
 # ランダム秒数だけ sleep
 sleep "${sleep_time}"
