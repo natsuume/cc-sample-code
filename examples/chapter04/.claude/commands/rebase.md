@@ -1,7 +1,7 @@
 ---
 description: "ルートブランチの最新変更をrebaseで反映"
 argument-hint: コンフリクト時にabort [true/false]
-allowed-tools: Bash(git status:*), Bash(git stash:*), Bash(git switch:*), Bash(git pull:*), Bash(git rebase:*), Bash(git symbolic-ref:*), Bash(git branch:*), Bash(git diff:*), Bash(sed:*), Bash(git stash pop:*)
+allowed-tools: Bash(git status:*), Bash(git stash:*), Bash(git switch:*), Bash(git pull:*), Bash(git rebase:*), Bash(git symbolic-ref:*), Bash(git branch:*), Bash(git diff:*), Bash(sed:*), Bash(git stash pop:*), Bash(git fetch:*)
 ---
 
 ワーキングブランチにルートブランチの最新変更をrebaseで反映してください。
