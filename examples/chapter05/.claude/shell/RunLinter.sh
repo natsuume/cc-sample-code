@@ -1,6 +1,15 @@
 #!/bin/bash
 set -euo pipefail
 
+# 必要なコマンドの存在確認
+if ! command -v jq &> /dev/null; then
+  exit 0
+fi
+
+if ! command -v uvx &> /dev/null; then
+  exit 0
+fi
+
 # stdin から JSON を読み取り
 HOOK_DATA=$(cat)
 
