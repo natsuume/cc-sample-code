@@ -1,0 +1,16 @@
+{
+  "description": "PostToolUseフックでRuffを自動実行します。（第5章参照）",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/shell/RunLinter.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "cc-book-marketplace-sample",
+  "description": "書籍サンプルのマーケットプレイスプラグイン",
+  "owner": {
+    "name": "Takashi Minowa"
+  },
+  "plugins": [
+    {
+      "name": "auto-ruff",
+      "description": "PostToolUseフックでRuffを自動実行します。（第5章参照）",
+      "source": "./plugins/auto-ruff"
+    },
+    {
+      "name": "force-draft-pr",
+      "description": "PreToolUseフックでPull RequestをDraftに強制します。（第5章参照）",
+      "source": "./plugins/force-draft-pr"
+    }
+  ]
+}

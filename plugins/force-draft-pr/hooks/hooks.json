@@ -1,0 +1,16 @@
+{
+  "description": "PreToolUseフックでPull RequestをDraftに強制します。（第5章参照）",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/shell/EnforceDraftPR.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
