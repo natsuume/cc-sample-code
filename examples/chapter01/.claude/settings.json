@@ -1,0 +1,10 @@
+{
+  "enabledMcpjsonServers": [
+    "codex"
+  ],
+  "enableAllProjectMcpServers": true,
+  "attribution": {
+    "commit": "This message is attribution test(commit).",
+    "pr": "This message is attribution test(PR)."
+  }
+}
