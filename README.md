@@ -18,7 +18,7 @@
 | chapter02 | MCP Server実装 | `mcp-server_minimal/typescript/` |
 | chapter03 | Agent定義 | `.claude/agents/multi-perspective-analyzer.md` |
 | chapter04 | Commands & Skills | `.claude/commands/`, `.claude/skills/` |
-| chapter05 | Hooks | `.claude/hooks.json`, `shell/` |
+| chapter05 | Hooks | `.claude/settings.json`, `shell/` |
 
 ### plugins/
 
