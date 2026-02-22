@@ -1,6 +1,7 @@
 # cc-sample-code
 
 「Claude Code開発体系 拡張・制御・運用の手引き」書籍のサンプルコードリポジトリです。
+https://nextpublishing.jp/book/19285.html
 
 ## 概要
 
